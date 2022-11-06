@@ -15,20 +15,21 @@ import page.OrderPage;
 public class OrderOfScooter {
     @Rule
     public BrowserRule browserRule = new BrowserRule();
+    // private final By buttonUpOrder;
     private final String userName;
     private final String userSurname;
     private final String userAdress;
     private final String userPhone;
     private final String userComment;
 
-    //private final String dateChoice;
+
     public OrderOfScooter(String userName, String userSurname, String userAdress, String userPhone, String userComment) {
         this.userName = userName;
         this.userSurname = userSurname;
         this.userAdress = userAdress;
         this.userPhone = userPhone;
         this.userComment = userComment;
-        //this.dateChoice = dateChoice;
+
     }
     @Parameterized.Parameters
     public static Object[][] getData() {
@@ -64,7 +65,7 @@ public class OrderOfScooter {
         orderPage.IsThirdOrderPageOpen();
     }
 
-    @Test
+   @Test
     public void checkDownOrder() { //проверка заказа через кнопку Заказать внизу главной страницы
         OrderPage orderPage = new OrderPage(browserRule.getDriver());
         orderPage.open();

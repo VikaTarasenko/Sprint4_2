@@ -1,7 +1,6 @@
 package page;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
+
 import static org.junit.Assert.assertTrue;
 public class OrderPage {
     private final String url = "https://qa-scooter.praktikum-services.ru/"; // url входа
@@ -23,11 +22,15 @@ public class OrderPage {
         driver.findElement(By.id("rcc-confirm-button")).click();
     }
     public void clickButtonUpOrder() {    //кликаем Заказать
+
         driver.findElement(buttonUpOrder).click();
+
+
     }
 
-    public void clickButtonDownOrder() {    // кликаем Заказать внизу страницы
-        driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL, Keys.END); //скролл страницы
+   public void clickButtonDownOrder() {    // кликаем Заказать внизу страницы
+         WebElement element = driver.findElement(By.id("accordion__heading-0"));
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
         driver.findElement(buttonDownOrder).click();
     }
     public boolean IsOrderPageOpen() { // проверка открытия формы заказа, "Для кого заказ"
