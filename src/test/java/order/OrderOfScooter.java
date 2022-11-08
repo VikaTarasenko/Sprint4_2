@@ -44,12 +44,12 @@ public class OrderOfScooter {
     }
 
     @Test
-    public void checkUpOrder() { //проверка заказа через обе кнопки Заказать
+    public void checkOrder() { //проверка заказа через обе кнопки Заказать
         OrderPage orderPage = new OrderPage(browserRule.getDriver());
         orderPage.open();
         orderPage.clickCookie(); // закрываем куки
         orderPage.clickButtonOrder(number);
-        orderPage.IsOrderPageOpen();
+       // orderPage.IsOrderPageOpen();
         orderPage.sendName(userName); //вводим имя
         orderPage.sendSurnameName(userSurname); //вводим фамилию
         orderPage.sendAdress(userAdress); // вводим адрес

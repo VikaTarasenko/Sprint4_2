@@ -30,9 +30,9 @@ public class OrderPage {
             driver.findElement(buttonDownOrder).click(); // нижняя кнопка Заказать
         }
     }
-    public boolean IsOrderPageOpen() { // проверка открытия формы заказа, "Для кого заказ"
+    /*public boolean IsOrderPageOpen() { // проверка открытия формы заказа, "Для кого заказ"
         return driver.findElements(By.xpath(".//div[@class='Order_Header__BZXOb']")).size() > 0;
-    }
+    }*/
     public void sendName(String text) { // заполняем поле Имя
         driver.findElement(userName).sendKeys(text);
     }
