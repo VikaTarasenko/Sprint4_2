@@ -20,7 +20,7 @@ public class MainPage {
     private final By question5 = By.xpath(".//div[@id='accordion__heading-4']"); // 5й вопрос списка
     private final By answer5 = By.id("accordion__panel-4"); // ответ на 5й вопрос
     private final By question6 = By.xpath(".//div[@id='accordion__heading-5']");// 6й вопрос списка
-    private final By  answer6 = By.id("accordion__panel-5");// ответ на 6й вопрос
+    private final By answer6 = By.id("accordion__panel-5");// ответ на 6й вопрос
     private final By question7 = By.xpath(".//div[@id='accordion__heading-6']"); // 7й вопрос списка
     private final By answer7 = By.id("accordion__panel-6"); // ответ на 7й вопрос
     private final By question8 = By.xpath(".//div[@id='accordion__heading-7']"); // 8й вопрос списка
@@ -29,13 +29,16 @@ public class MainPage {
 
     // private final By goButton = By.xpath(".//button[text() ='Go!']"); */
     private WebDriver driver;
+
     //private static final String RANDOM_ORDER_NUMBER = randomString();
     public MainPage(WebDriver driver) {
         this.driver = driver;
     }
+
     public void open() { //переход по ссылке
         driver.get(url);
     } // переход на сервис
+
     public void clickCookie() { //закрываем куки
         driver.findElement(By.id("rcc-confirm-button")).click();
     } // закрытие куки
@@ -43,9 +46,9 @@ public class MainPage {
 
     public void scroll() { // скролл вниз
         WebElement element = driver.findElement(By.id("accordion__heading-0"));
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
 
-        //driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL, Keys.END); //скролл страницы
+       //driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL, Keys.END); //скролл страницы
     }
     public void clickQuestion1() { //клик на 1й вопрос
         driver.findElement(question1).click();
@@ -114,7 +117,9 @@ public class MainPage {
 
     } // проверка наличия текста в ответе на 8й вопрос
 
-    public OrderPage orderPage() {
-        return new OrderPage(driver);
+        public OrderPage orderPage() {
+            return new OrderPage(driver);
+        }
+
     }
-}
+

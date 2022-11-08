@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="08db1ab6-5b0f-4726-b10c-a44fe0d5f14e" name="Changes" comment="add project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/BrowserRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/BrowserRule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/page/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/MainPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/page/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/OrderPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/order/OrderOfScooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/order/OrderOfScooter.java" afterDir="false" />
@@ -43,7 +45,7 @@
     &quot;last_opened_file_path&quot;: &quot;D:/Y.Praktikum/sprint4&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.OrderOfScooter">
+  <component name="RunManager" selected="JUnit.ScooterQuestions">
     <configuration name="OrderOfScooter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sprint4_2" />
       <extension name="coverage">
@@ -54,12 +56,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="order" />
       <option name="MAIN_CLASS_NAME" value="order.OrderOfScooter" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderOfScooter.checkDownOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderOfScooter.checkUpOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sprint4_2" />
       <extension name="coverage">
         <pattern>
@@ -69,7 +72,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="order" />
       <option name="MAIN_CLASS_NAME" value="order.OrderOfScooter" />
-      <option name="METHOD_NAME" value="checkDownOrder" />
+      <option name="METHOD_NAME" value="checkUpOrder" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -90,7 +93,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScooterQuestions.checkAllText" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ScooterQuestions.checkText" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sprint4_2" />
       <extension name="coverage">
         <pattern>
@@ -100,18 +103,42 @@
       </extension>
       <option name="PACKAGE_NAME" value="questions" />
       <option name="MAIN_CLASS_NAME" value="questions.ScooterQuestions" />
-      <option name="METHOD_NAME" value="checkAllText" />
+      <option name="METHOD_NAME" value="checkText" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ScooterQuestions.checkText1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint4_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="questions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="questions" />
+      <option name="MAIN_CLASS_NAME" value="questions.ScooterQuestions" />
+      <option name="METHOD_NAME" value="checkText1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.OrderOfScooter.checkUpOrder" />
+      <item itemvalue="JUnit.ScooterQuestions.checkText" />
+      <item itemvalue="JUnit.ScooterQuestions" />
+      <item itemvalue="JUnit.OrderOfScooter" />
+      <item itemvalue="JUnit.ScooterQuestions.checkText1" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.OrderOfScooter" />
         <item itemvalue="JUnit.ScooterQuestions" />
-        <item itemvalue="JUnit.ScooterQuestions.checkAllText" />
-        <item itemvalue="JUnit.OrderOfScooter.checkDownOrder" />
+        <item itemvalue="JUnit.ScooterQuestions.checkText" />
+        <item itemvalue="JUnit.ScooterQuestions.checkText1" />
+        <item itemvalue="JUnit.OrderOfScooter" />
+        <item itemvalue="JUnit.OrderOfScooter.checkUpOrder" />
       </list>
     </recent_temporary>
   </component>

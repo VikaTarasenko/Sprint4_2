@@ -16,6 +16,7 @@ public class BrowserRule extends ExternalResource {
 
     @Override
     protected void before() throws Throwable {
+        WebDriverManager.firefoxdriver().setup();
         WebDriverManager.chromedriver().setup();
         String browser = System.getenv("browser");
         if ("ff".equals(browser)) {

@@ -21,32 +21,35 @@ public class OrderOfScooter {
     private final String userAdress;
     private final String userPhone;
     private final String userComment;
+    private final int number;
 
 
-    public OrderOfScooter(String userName, String userSurname, String userAdress, String userPhone, String userComment) {
+    public OrderOfScooter(String userName, String userSurname, String userAdress, String userPhone, String userComment,int number) {
         this.userName = userName;
         this.userSurname = userSurname;
         this.userAdress = userAdress;
         this.userPhone = userPhone;
         this.userComment = userComment;
+        this.number = number;
 
     }
     @Parameterized.Parameters
     public static Object[][] getData() {
         return new Object[][]{
-                {"Анна", "Иванова", "Фрязево", "88999999999", "Комментарий короткий"},
-                {"Гертруда", "Петрова", "Коптево", "87777777777", "не имеет значения"},
+                {"Анна", "Иванова", "Фрязево", "88999999999", "Комментарий короткий", 0},
+                {"Гертруда", "Петрова", "Коптево", "87777777777", "не имеет значения", 0},
+                {"Анна", "Иванова", "Фрязево", "88999999999", "Комментарий короткий", 1},
+                {"Гертруда", "Петрова", "Коптево", "87777777777", "не имеет значения", 1},
         };
     }
 
     @Test
-    public void checkUpOrder() { //проверка заказа через кнопку Заказать вверху главной страницы
+    public void checkUpOrder() { //проверка заказа через обе кнопки Заказать
         OrderPage orderPage = new OrderPage(browserRule.getDriver());
         orderPage.open();
         orderPage.clickCookie(); // закрываем куки
-        orderPage.clickButtonUpOrder();
+        orderPage.clickButtonOrder(number);
         orderPage.IsOrderPageOpen();
-        //Assert.assertTrue(String.valueOf(true), orderPage.IsOrderPageOpen());
         orderPage.sendName(userName); //вводим имя
         orderPage.sendSurnameName(userSurname); //вводим фамилию
         orderPage.sendAdress(userAdress); // вводим адрес
@@ -54,7 +57,7 @@ public class OrderOfScooter {
         orderPage.clickMetro();
         orderPage.sendPhoneNumber(userPhone); // вводим номер телефона
         orderPage.clickButtonNext();
-        orderPage.IsSecondOrderPageOpen();
+        //orderPage.IsSecondOrderPageOpen();
         orderPage.clickWhenBringOrder();
         orderPage.choiceWhenBringOrder();
         orderPage.choiceDateRent();
@@ -62,32 +65,6 @@ public class OrderOfScooter {
         orderPage.comment(userComment); // оставляем комментарий
         orderPage.clickToOrder();
         orderPage.clickYes();
-        orderPage.IsThirdOrderPageOpen();
-    }
-
-   @Test
-    public void checkDownOrder() { //проверка заказа через кнопку Заказать внизу главной страницы
-        OrderPage orderPage = new OrderPage(browserRule.getDriver());
-        orderPage.open();
-        orderPage.clickCookie(); // закрываем куки
-        orderPage.clickButtonDownOrder(); // скроллим и кликаем Заказать внизу
-        orderPage.IsOrderPageOpen();
-        // Assert.assertTrue(String.valueOf(true), orderPage.IsOrderPageOpen());
-        orderPage.sendName(userName);
-        orderPage.sendSurnameName(userSurname);
-        orderPage.sendAdress(userAdress);
-        orderPage.clickMetro();
-        orderPage.clickMetro();
-        orderPage.sendPhoneNumber(userPhone);
-        orderPage.clickButtonNext();
-        orderPage.IsSecondOrderPageOpen();
-        orderPage.clickWhenBringOrder();
-        orderPage.choiceWhenBringOrder();
-        orderPage.choiceDateRent();
-        orderPage.choiceColor();
-        orderPage.comment(userComment);
-        orderPage.clickToOrder();
-        orderPage.clickYes();
-        orderPage.IsThirdOrderPageOpen();
+        orderPage.checkOrderPageOpen();
     }
 }

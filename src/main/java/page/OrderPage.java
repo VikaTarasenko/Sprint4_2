@@ -1,11 +1,12 @@
 package page;
+import org.junit.Assert;
 import org.openqa.selenium.*;
 
 import static org.junit.Assert.assertTrue;
 public class OrderPage {
     private final String url = "https://qa-scooter.praktikum-services.ru/"; // url входа
     private final By buttonUpOrder = By.xpath(".//button[@class='Button_Button__ra12g']"); // кнопка Заказать вверху страницы
-    private final By buttonDownOrder = By.xpath(".//button[@class='Button_Button__ra12g Button_Middle__1CSJM']");//кнопка Заказать внизу страницы
+    private final By buttonDownOrder = By.xpath(".//div[@class='Home_FinishButton__1_cWm']/button[text()='Заказать']"); //кнопка Заказать внизу страницы
     public final By userName = By.cssSelector("input[placeholder='* Имя']");// поле Имя
     public final By userSurname = By.cssSelector("input[placeholder='* Фамилия']");// поле Фамилия
     public final By userAdress = By.cssSelector("input[placeholder='* Адрес: куда привезти заказ']");// поле Адрес
@@ -21,17 +22,13 @@ public class OrderPage {
     public void clickCookie() { //закрываем куки
         driver.findElement(By.id("rcc-confirm-button")).click();
     }
-    public void clickButtonUpOrder() {    //кликаем Заказать
 
-        driver.findElement(buttonUpOrder).click();
-
-
-    }
-
-   public void clickButtonDownOrder() {    // кликаем Заказать внизу страницы
-         WebElement element = driver.findElement(By.id("accordion__heading-0"));
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
-        driver.findElement(buttonDownOrder).click();
+   public void clickButtonOrder(int number) {    // кликаем Заказать вверху и внизу страницы
+        if(number == 0) {
+            driver.findElement(buttonUpOrder).click(); // верхняя кнопка Заказать
+        } else if (number == 1) {
+            driver.findElement(buttonDownOrder).click(); // нижняя кнопка Заказать
+        }
     }
     public boolean IsOrderPageOpen() { // проверка открытия формы заказа, "Для кого заказ"
         return driver.findElements(By.xpath(".//div[@class='Order_Header__BZXOb']")).size() > 0;
@@ -54,9 +51,9 @@ public class OrderPage {
     public void clickButtonNext() {          // клик кнопки Далее
         driver.findElement(By.xpath(". //button[@class='Button_Button__ra12g Button_Middle__1CSJM']")).click();
     }
-    public boolean IsSecondOrderPageOpen() { // проверка открытия формы заказа, "Про аренду"
+    /*public boolean IsSecondOrderPageOpen() { // проверка открытия формы заказа, "Про аренду"
         return driver.findElements(By.xpath(".//div[@class='Order_Header__BZXOb']")).size() > 0;
-    }
+    }*/
     public void clickWhenBringOrder() {   // клик на календарь
         driver.findElement(By.xpath("//input[@placeholder='* Когда привезти самокат']")).click();
     }
@@ -80,7 +77,10 @@ public class OrderPage {
     public void clickYes() {   // кликнуть Да
         driver.findElement(By.xpath(".//button[contains(text(),'Да')] ")).click();
     }
-    public boolean IsThirdOrderPageOpen() { // проверка открытия окна подтверждения заказа
-        return driver.findElements(By.className("Order_ModalHeader")).size() > 0;
+    public void checkOrderPageOpen() { // проверка открытия окна подтверждения заказа
+        String text = driver.findElement(By.xpath(".//div[text()='Заказ оформлен']")).getText();
+        String expected = "Заказ оформлен";
+        Assert.assertEquals(expected, text);
+
     }
 }
