@@ -4,11 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08db1ab6-5b0f-4726-b10c-a44fe0d5f14e" name="Changes" comment="" />
+    <list default="true" id="08db1ab6-5b0f-4726-b10c-a44fe0d5f14e" name="Changes" comment="parameterized">
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page/OrderPage.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2H4eH0opztSlK5v9XK5hPIRA1BH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -16,12 +31,111 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Y.Praktikum/sprint4&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="JUnit.OrderOfScooter.checkOrder">
+    <configuration name="OrderOfScooter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint4_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="order.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="order" />
+      <option name="MAIN_CLASS_NAME" value="order.OrderOfScooter" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderOfScooter.checkOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint4_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="order.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="order" />
+      <option name="MAIN_CLASS_NAME" value="order.OrderOfScooter" />
+      <option name="METHOD_NAME" value="checkOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderOfScooter.checkUpOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint4_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="order.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="order" />
+      <option name="MAIN_CLASS_NAME" value="order.OrderOfScooter" />
+      <option name="METHOD_NAME" value="checkUpOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScooterQuestions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint4_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="questions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="questions" />
+      <option name="MAIN_CLASS_NAME" value="questions.ScooterQuestions" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScooterQuestions.checkText" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint4_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="questions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="questions" />
+      <option name="MAIN_CLASS_NAME" value="questions.ScooterQuestions" />
+      <option name="METHOD_NAME" value="checkText" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.OrderOfScooter.checkOrder" />
+      <item itemvalue="JUnit.OrderOfScooter.checkUpOrder" />
+      <item itemvalue="JUnit.ScooterQuestions.checkText" />
+      <item itemvalue="JUnit.ScooterQuestions" />
+      <item itemvalue="JUnit.OrderOfScooter" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.OrderOfScooter.checkOrder" />
+        <item itemvalue="JUnit.OrderOfScooter.checkUpOrder" />
+        <item itemvalue="JUnit.OrderOfScooter" />
+        <item itemvalue="JUnit.ScooterQuestions" />
+        <item itemvalue="JUnit.ScooterQuestions.checkText" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -31,6 +145,21 @@
       <option name="presentableId" value="Default" />
       <updated>1667548693768</updated>
     </task>
+    <task id="LOCAL-00001" summary="add project">
+      <created>1667550664200</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667550664200</updated>
+    </task>
+    <task id="LOCAL-00002" summary="parameterized">
+      <created>1667895655365</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667895655365</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -43,5 +172,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add project" />
+    <MESSAGE value="parameterized" />
+    <option name="LAST_COMMIT_MESSAGE" value="parameterized" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/order/OrderOfScooter.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
